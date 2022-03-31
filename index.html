@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta name="description" content="The Earth needs the greatest defender" />
+    <meta name="keyword" content="The Earth needs the greatest defender" />
+    <meta name="author" content="Assemble your team" />
+    <title>Assemble your team | The Earth needs the greatest defender</title>
+    <!-- Styles-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/vendors.min.css"
+    />
+    <link href="./assets/css/styles.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <header id="masthead" class="text-center">
+        <h1>Assemble your team</h1>
+        <span class="sep-border"></span>
+        <h3>Make a group consists of 3 people</h3>
+      </header>
+      <div id="team-builder">
+        <div id="team-chosen"></div>
+        <div id="member-input">
+          <input
+            type="text"
+            class="input-field"
+            id="name-input"
+            placeholder="Input name here..."
+          />
+          <button id="confirm-member">Add to the team</button>
+          <button
+            id="confirm-team"
+            class="not-ready"
+            data-toggle="modal"
+            type="button"
+            class="btn btn-primary"
+            data-target="#exampleModal"
+          >
+            Need <span id="number-people">3</span> more people
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="modal-body">
+              <h5 class="modal-title" id="exampleModalLabel">
+                congratulations
+              </h5>
+              <p>You've just assembled The Earth Greatest Defender</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/vendors.min.js"></script>
+    <script type="text/javascript" src="./assets/js/scripts.js"></script>
+    <script type="text/javascript" src="./assets/js/method.js"></script>
+  </body>
+</html>

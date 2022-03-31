@@ -1,0 +1,22 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-family-title;
+	font-weight: 500;
+	color: $color-dark;
+
+	a {
+		color: $color-dark;
+		transition: color ease-in-out .2s;
+		&:hover {
+			color: $color-secondary;
+		}
+	}
+
+	&.widget-title {
+		font-family: $font-family-body;
+		font-size: 18px;
+	}
+}
+
+.font-body {
+	font-family: $font-family-body !important;
+}

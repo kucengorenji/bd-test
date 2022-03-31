@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('GalanoGrotesque-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('GalanoGrotesque-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('GalanoGrotesque-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('GalanoGrotesque-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Galano Grotesque';
+    src: url('GalanoGrotesque-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+

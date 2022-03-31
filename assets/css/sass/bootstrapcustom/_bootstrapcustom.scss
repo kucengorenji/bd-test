@@ -1,0 +1,95 @@
+$link-color: $color-primary;
+$link-hover-color: darken($link-color, 10%);
+$link-hover-decoration: none;
+$blue: $color-primary;
+$theme-colors: (
+  "primary": $color-primary,
+  "secondary": $color-secondary,
+  "white" : $color-white,
+  "dark" : $color-dark
+);
+
+$container-max-widths: (
+  xl: 1140px
+);
+$btn-border-width : 2px;
+$input-btn-focus-color : rgba($color-primary, .25);
+$btn-border-radius: 0px;
+$input-border-radius: 0px;
+$input-padding-y: 12px;
+$input-padding-x: 15px;
+$border-radius:  40px;
+$border-radius-lg:  50px;
+$border-radius-sm:  30px;
+$input-focus-border-color: lighten($color-primary, 10%);
+$input-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+$input-btn-focus-color : rgba($color-primary, .25);
+$input-focus-border-color: lighten($color-primary, 10%);
+$input-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color;
+$btn-padding-y: 20px;
+$btn-padding-x: 45px;
+$btn-font-size: 20px;
+$btn-font-weight: 500;
+$btn-line-height: 20px;
+$input-height: 60px;
+
+@media screen and (max-width: 992px) {
+    $btn-padding-y: 20px;
+    $btn-padding-x: 30px;
+}
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+    &.btn-white {
+        background-color: transparent;
+        color: #ffffff;
+    }
+
+    &.btn-secondary {
+      color: #ffffff;
+    }
+
+    @media screen and (max-width: 992px) {
+        padding: 10px 25px !important;
+        font-size: 14px !important;
+    }
+}
+
+.col-2dot4 {
+    -webkit-box-flex: 0 !important;
+    -ms-flex: 0 0 20% !important;
+    flex: 0 0 20% !important;
+    max-width: 20% !important;
+}
+@media (min-width: 576) {
+    .col-sm-2dot4 {
+        -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 20% !important;
+        flex: 0 0 20% !important;
+        max-width: 20% !important;
+    }
+}
+@media (min-width: 768px) {
+    .col-md-2dot4 {
+        -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 20% !important;
+        flex: 0 0 20% !important;
+        max-width: 20% !important;
+    }
+}
+@media (min-width: 992px) {
+    .col-lg-2dot4 {
+        -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 20% !important;
+        flex: 0 0 20% !important;
+        max-width: 20% !important;
+    }
+}
+@media (min-width: 1140px) {
+    .col-xl-2dot4 {
+        -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 20% !important;
+        flex: 0 0 20% !important;
+        max-width: 20% !important;
+    }
+}

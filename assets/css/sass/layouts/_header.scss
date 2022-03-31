@@ -1,0 +1,45 @@
+header#masthead {
+	margin-bottom: 50px;
+
+	h1 {
+		font-size: 33px;
+		font-weight: 700;
+		opacity: 0;
+		@include translate(0, -40px);
+		@include transition(opacity ease-in-out .3s, transform ease-in-out .3s);
+
+		body.loaded & {
+			@include translate(0,0);
+			opacity: 1;
+		}
+	}
+
+	span.sep-border {
+		width: 80px;
+		height: 5px;
+		display: inline-block;
+		margin: 30px 0 30px;
+		border-radius: 2.5px;
+		background-color: $color-primary;
+		opacity: 0;
+		@include translate(40px, 0);
+		@include transition(opacity ease-in-out .3s, transform ease-in-out .3s);
+		body.loaded & {
+			@include translate(0,0);
+			opacity: 1;
+		}
+	}
+
+	h3 {
+		font-size: 16px;
+		color: $color-text;
+		opacity: 0;
+		font-weight: 400;
+		@include translate(0, -40px);
+		@include transition(opacity ease-in-out .3s, transform ease-in-out .3s);
+		body.loaded & {
+			@include translate(0,0);
+			opacity: 1;
+		}
+	}
+}

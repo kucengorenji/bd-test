@@ -1,0 +1,141 @@
+@mixin linear-gradient($from, $to) {
+  background: $to;
+  background: -moz-linear-gradient(top, $from 0%, $to 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to));
+  background: -webkit-linear-gradient(top, $from 0%,$to 100%);
+  background: -o-linear-gradient(top, $from 0%,$to 100%);
+  background: linear-gradient(to bottom, $from 0%,$to 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to})
+}
+@mixin normal-gradient($from, $to) {
+  background: -webkit-linear-gradient($from, $to);
+  background: -moz-linear-gradient($from, $to);
+  background: -o-linear-gradient($from, $to);
+  background: linear-gradient($from, $to);
+}
+@mixin border-gradient($from, $to) {
+  -moz-border-image: -moz-linear-gradient(top, $from  0%, $to 100%);
+  -webkit-border-image: -webkit-linear-gradient(top, $from 0%, $to 100%);
+  border-image: linear-gradient(to bottom, $from 0%, $to 100%);
+  border-image-slice: 1;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin placeholder($color: $color-grey) {
+  // Firefox
+  &::-moz-placeholder {
+      @extend .okomitoRegular;
+      color: $color;
+      font-size: 12px;
+      opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder {
+      @extend .okomitoRegular;
+      color: $color;
+  }
+  // Internet Explorer 10+
+  &::-webkit-input-placeholder {
+      @extend .okomitoRegular;
+      color: $color;
+  }
+  // Safari and Chrome
+}
+
+@mixin placeholderColor($color) {
+  // Firefox
+  &::-moz-placeholder {
+      color: $color;
+      opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder {
+      color: $color;
+  }
+  // Internet Explorer 10+
+  &::-webkit-input-placeholder {
+      color: $color;
+  }
+  // Safari and Chrome
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin translate($x,$y) {
+  -webkit-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+@mixin translateX($x) {
+  -webkit-transform: translateX($x);
+  -ms-transform: translateX($x);
+  -o-transform: translateX($x);
+  transform: translateX($x);
+}
+
+@mixin translateY($y) {
+  -webkit-transform: translateY($y);
+  -ms-transform: translateY($y);
+  -o-transform: translateY($y);
+  transform: translateY($y);
+}
+
+@mixin rotate($x) {
+  -webkit-transform: rotate($x);
+  -moz-transform: rotate($x);
+  -o-transform: rotate($x);
+  transform: rotate($x);
+}
+
+@mixin translatey-rotate($y, $r) {
+  -webkit-transform: translateY($y) rotate($r);
+  -moz-transform: translateY($y) rotate($r);
+  -o-transform: translateY($y) rotate($r);
+  transform: translateY($y) rotate($r);
+}
+@mixin translate-rotate($y, $x, $r) {
+  -webkit-transform: translate($y, $x) rotate($r);
+  -moz-transform: translate($y, $x) rotate($r);
+  -o-transform: translate($y, $x) rotate($r);
+  transform: translate($y, $x) rotate($r);
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin transition($transition...) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+@mixin scale($s) {
+  -webkit-transform: scale($s);
+  -moz-transform: scale($s);
+  -o-transform: scale($s);
+  transform: scale($s);
+}
+
+@mixin iconFont {
+    font-family: icomoon!important;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;    
+}

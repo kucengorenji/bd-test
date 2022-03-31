@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="description" content="{{desc}}">
+        <meta name="keyword" content="{{desc}}">
+        <meta name="author" content="{{title}}">
+        <title>{{title}} | {{desc}}</title>
+        <!-- Styles-->
+        <link rel="stylesheet" type="text/css" href="./assets/css/vendors.min.css">
+        <link href="./assets/css/styles.min.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="page-wrapper">
+        {{#> header-block}}
+            {{> includes/header }}
+        {{/header-block}}
+        {{#> sections-block}}
+
+        {{/sections-block}}
+
+        {{#> footer-block}}
+            {{> includes/helper }}
+        {{/footer-block}}
+        </div>
+
+        <script src="./assets/js/vendors.min.js"></script>
+        <script type="text/javascript" src="./assets/js/scripts.js"></script>
+    </body>
+</html>

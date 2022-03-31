@@ -1,0 +1,95 @@
+#member-input {
+    position: relative;
+	opacity: 0;
+    @include translate(0, 40px);
+    @include transition(opacity ease-in-out .3s, transform ease-in-out .3s);
+
+	body.loaded & {
+		opacity: 1;
+		@include translate(0,0);
+
+	}
+
+	input#name-input {
+	    width: 100%;
+	    display: block;
+	    line-height: 20px;
+	    font-size: 16px;
+	    color: #000000;
+	    padding: 20px;
+	    border: solid 1px #D6E7F6;
+	    border-radius: 10px;
+	}
+
+	button#confirm-member {
+	    position: absolute;
+	    font-size: 0;
+	    top: 0;
+	    right: 0;
+	    width: 40px;
+	    height: 40px;
+	    line-height: 40px;
+	    border: 0;
+	    background: $color-primary;
+	    border-radius: 20px;
+	    margin: 10px;
+		&:after,
+		&:before {
+		    content: '';
+		    display: block;
+		    position: absolute;
+		    height: 2px;
+		    background: #ffffff;
+		    border-radius: 2px;
+			@include transition(transform ease-in .2s);
+		}
+		&:after {
+		    width: 15px;
+		    top: 60%;
+		    left: 45%;
+		    transform-origin: left;
+            @include rotate(0);
+
+			body.loaded  & {
+                @include rotate(-46deg);
+			}
+		}
+		&:before {
+		    width: 9px;
+		    top: 60%;
+		    right: 55%;
+		    transform-origin: right;
+		    margin-right: -1px;
+            @include rotate(0);
+
+			body.loaded  & {
+                @include rotate(45deg);
+			}
+		}
+	}
+
+	button#confirm-team {
+	    border: solid 1px $color-secondary;;
+	    width: 100%;
+	    margin-top: 25px;
+	    line-height: 20px;
+	    color: #ffffff;
+	    background-color: $color-secondary;;
+	    padding: 20px 15px;
+	    border-radius: 30px;
+	    font-size: 20px;
+	    box-shadow: 0 17px 50px -23px $color-secondary;
+		opacity: 1;
+		@include transition(border ease-in-out .2s, background ease-in-out .2s, color ease-in-out .2s, box-shadow ease-in-out .2s);
+		cursor: pointer;
+
+		&.not-ready {
+		    background-color: #ffffff;
+		    color: $color-secondary;;
+		    box-shadow: none;
+			opacity: .3;
+			cursor: default;
+			pointer-events: none;
+		}
+	}
+}
